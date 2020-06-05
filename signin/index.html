@@ -1,6 +1,23 @@
 <html>
 <haed>
     <title></title>
+<script>
+    function display()
+    {
+          var p1=document.getElementById("p1").value;
+	      var  p2=document.getElementById("p2").value;
+
+      if (p1 == "ankit" && p2 == "ankitmaurya")
+            {
+                alert("You are Successfully logged in");
+            }
+            else
+            {
+                alert("Sorry you have entered a wrong username or password");
+            } 	          
+    }
+    </script>
+
     <style>
     	*{
     		margin:0;
@@ -72,7 +89,7 @@
                                            font-size: 12px;    
     	                                  }                    
 
-    	.box input[type="submit"]{
+    	/*.box input[type="submit"]{
                                         background:transparent;
                                         border:none;
                                         outline: none;
@@ -82,7 +99,8 @@
                                         border-radius: 5px;
                                         font-size: 14px;
                               
-    	                          }     
+    	                          }   */
+                    
 
       .sign {
                background:transparent;
@@ -96,6 +114,17 @@
                               
            }  
                                                                   
+    
+    	button{
+                                         background:transparent;
+                                        border:none;
+                                        outline: none;
+                                        color: #fff;
+                                        background:#03a9f4;
+                                        padding: 8px 16px;
+                                        border-radius: 5px;
+                                        font-size: 14px;
+    	      }           
     </style>	
 </head>
 <body>
@@ -105,16 +134,16 @@
 <h1>Login Form</h1>
 <form>
 <div class="inputBox">
-      <input type="text" name="username" autocomplete="off" required>
+      <input type="text" id="p1" name="username" autocomplete="off" required>
       <label>username</label>
 </div>
 
 <div class="inputBox">
-      <input type="password" name="password" autocomplete="off" required>
+      <input type="password"  id="p2" name="password" autocomplete="off" required>
       <label>password</label>
 </div>
-      <input type="submit" name="" value="Sign In">
-      <a class="sign" href="../signup/index.html">Sign Up</a>
+      <!-- <input type="submit" name="" value="Sign In"> -->
+      <button onclick="display();">Sign In</button>
 </form>
 </div>
 </div>
